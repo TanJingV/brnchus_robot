@@ -34,7 +34,7 @@ importing acquisition-system code.
 
 ## Documentation and website
 
-**Project Page:** [https://anonymous.4open.science/w/brnchus_robot-AC6D/docs/site/index.html#simulation](https://anonymous.4open.science/w/brnchus_robot-AC6D/docs/site/index.html#simulation)
+[**Project Page**](https://tanjingv.github.io/brnchus_robot/#simulation)
 
 System-specific instructions are stored in each system's `README.md`. The
 static project website remains under `docs/site/` and can stage a browser model
