@@ -1,6 +1,6 @@
 # Project website
 
-**Canonical Project Page:** [https://tanjingv.github.io/brnchus_robot/#simulation](https://tanjingv.github.io/brnchus_robot/#simulation)
+**Canonical Project Page:** [https://anonymous.4open.science/w/brnchus_robot-AC6D/docs/site/index.html#simulation](https://anonymous.4open.science/w/brnchus_robot-AC6D/docs/site/index.html#simulation)
 
 Static GitHub Pages website with a browser-native MuJoCo simulation. Serve this
 folder from the repository root with:
