@@ -34,7 +34,7 @@ importing acquisition-system code.
 
 ## Documentation and website
 
-[**Project Page**](https://tanjingv.github.io/brnchus_robot/#simulation)
+**Project Page:** [BronchoTwin](https://tanjingv.github.io/brnchus_robot/#simulation)
 
 System-specific instructions are stored in each system's `README.md`. The
 static project website remains under `docs/site/` and can stage a browser model
