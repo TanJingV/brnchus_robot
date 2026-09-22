@@ -196,6 +196,33 @@ h1 { max-width: 1080px; margin: 24px auto 20px; font: 600 clamp(36px, 5.1vw, 61p
 .result-cards span { margin: 11px 0 6px; color: #26364f; font-size: 13px; font-weight: 700; line-height: 1.35; }
 .result-cards small { color: #758299; font-size: 10px; line-height: 1.5; }
 .result-statement { max-width: 800px; margin: 70px auto 15px; background: linear-gradient(98deg, #146ee8, #9459d6 55%, #ed528e); background-clip: text; color: transparent; font: 700 clamp(24px, 3.5vw, 39px)/1.25 "Avenir Next", "Segoe UI", sans-serif; text-align: center; text-wrap: balance; }
+.video-section { width: min(1240px, calc(100% - 56px)); }
+.video-section .section-title { max-width: 850px; margin: 0 auto 36px; }
+.video-section .section-title > p:last-child { margin-bottom: 0; }
+.video-frame { overflow: hidden; aspect-ratio: 16 / 9; background: #0b1424; }
+.video-frame video { display: block; width: 100%; height: 100%; object-fit: contain; }
+.video-feature { display: grid; grid-template-columns: minmax(0, 1.65fr) minmax(280px, .75fr); overflow: hidden; border: 1px solid #263b58; border-radius: 16px; background: #112138; box-shadow: 0 25px 70px rgba(18, 39, 70, .17); }
+.video-frame-feature { aspect-ratio: 16 / 9; }
+.video-feature-copy { display: flex; align-items: flex-start; justify-content: center; flex-direction: column; padding: clamp(25px, 4vw, 52px); color: #f1f5fb; background: radial-gradient(circle at 100% 0, rgba(71, 131, 220, .28), transparent 48%), #112138; }
+.video-index, .video-format, .video-group-heading > span, .video-card-copy > span { font: 700 10px "SFMono-Regular", Consolas, monospace; letter-spacing: .12em; }
+.video-index { color: #7eafff; }
+.video-feature-copy h3, .video-comparison-copy h3 { margin: 18px 0 12px; font: 600 clamp(25px, 3vw, 36px)/1.14 "Iowan Old Style", Georgia, serif; letter-spacing: -.025em; }
+.video-feature-copy p, .video-comparison-copy p { margin: 0; color: #b5c4d9; font-size: 13px; line-height: 1.8; }
+.video-format { margin-top: 32px; color: #87d4d6; font-size: 9px; }
+.video-group-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 20px; margin: 57px 0 19px; padding-bottom: 13px; border-bottom: 1px solid var(--line); }
+.video-group-heading > span { color: #2866cc; white-space: nowrap; }
+.video-group-heading h3 { margin: 0; color: #23334c; font: 600 clamp(20px, 2.5vw, 29px)/1.2 "Iowan Old Style", Georgia, serif; }
+.video-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.video-card { overflow: hidden; border: 1px solid #dce4ef; border-radius: 12px; background: #fff; box-shadow: 0 10px 28px rgba(28, 50, 82, .055); }
+.video-card .video-frame { border-bottom: 1px solid #dce4ef; }
+.video-card-copy { padding: 19px 20px 23px; }
+.video-card-copy > span { color: #2a6ed5; font-size: 9px; }
+.video-card-copy h4 { margin: 7px 0 5px; color: #253650; font: 650 19px "Iowan Old Style", Georgia, serif; }
+.video-card-copy p { margin: 0; color: #67758b; font-size: 12px; line-height: 1.65; }
+.video-comparison { display: grid; grid-template-columns: minmax(0, .95fr) minmax(0, 1.2fr); align-items: center; gap: 38px; margin-top: 54px; padding: 19px 38px 19px 19px; border: 1px solid #dbe4f0; border-radius: 15px; background: linear-gradient(115deg, #f0f5fc, #fff); }
+.video-comparison .video-frame { border-radius: 9px; }
+.video-comparison-copy h3 { color: #243955; }
+.video-comparison-copy p { max-width: 410px; color: #596a81; }
 .model-figure { margin: 32px 0 0; }
 .model-figure img { display: block; width: 100%; border: 1px solid var(--line); border-radius: 13px; background: #fafbfc; }
 .citation-section { text-align: center; }
@@ -234,6 +261,12 @@ footer > a:last-child { text-align: right; }
   .contribution-grid { grid-template-columns: 1fr; }
   .paper-grid, .paper-grid.reverse { grid-template-columns: 1fr; }
   .result-cards { grid-template-columns: 1fr 1fr; }
+  .video-feature { grid-template-columns: 1fr; }
+  .video-feature-copy { padding: 27px 30px; }
+  .video-format { margin-top: 18px; }
+  .video-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .video-comparison { grid-template-columns: 1fr; gap: 20px; padding: 18px; }
+  .video-comparison-copy { padding: 0 8px 10px; }
   .hero-metrics { grid-template-columns: 1fr 1fr; }
   .hero-metrics div:nth-child(2) { border-right: 0; }
   .hero-metrics div:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
@@ -242,7 +275,7 @@ footer > a:last-child { text-align: right; }
 }
 @media (max-width: 560px) {
   .site-nav { padding: 0 20px; }
-  .site-nav nav a:not(:last-child) { display: none; }
+  .site-nav nav a:not(:nth-last-child(2)):not(:last-child) { display: none; }
   .wordmark { font-size: 11px; }
   .paper-hero { padding: 64px 20px 55px; }
   .paper-hero h1 { font-size: 39px; }
@@ -266,6 +299,10 @@ footer > a:last-child { text-align: right; }
   .hero-metrics div { border-right: 0; border-bottom: 1px solid var(--line); }
   .hero-metrics div:last-child { border-bottom: 0; }
   .result-cards { grid-template-columns: 1fr; }
+  .video-grid { grid-template-columns: 1fr; }
+  .video-group-heading { display: block; margin-top: 45px; }
+  .video-group-heading h3 { margin-top: 8px; }
+  .video-feature-copy { padding: 25px; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

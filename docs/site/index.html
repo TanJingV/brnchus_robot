@@ -9,7 +9,7 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <title>BronchoTwin - Multimodal Dynamics Grounding</title>
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=20">
+  <link rel="stylesheet" href="styles.css?v=21">
   <script type="importmap">
     {
       "imports": {
@@ -27,6 +27,7 @@
       <a href="#overview">Overview</a>
       <a href="#method">Method</a>
       <a href="#results">Results</a>
+      <a href="#videos">Videos</a>
       <a href="https://anonymous.4open.science/r/brnchus_robot-AC6D/">GitHub</a>
     </nav>
   </header>
@@ -41,6 +42,7 @@
         <a href="#simulation"><span class="link-icon">01</span> Live simulation</a>
         <a href="https://anonymous.4open.science/r/brnchus_robot-AC6D/"><span class="link-icon">02</span> Source code</a>
         <a href="sim/bronchoscope_web.xml" download><span class="link-icon">03</span> Web MJCF</a>
+        <a href="#videos"><span class="link-icon">04</span> Research videos</a>
       </div>
       <p class="hero-statement">Ground the dynamics. Predict the response. Execute with confidence.</p>
       <div class="hero-metrics" aria-label="Key project metrics">
@@ -259,6 +261,72 @@
         <img src="assets/paper-branches.png" alt="Real-to-Sim position consistency across 65 terminal airway paths" loading="lazy">
         <figcaption><b>Terminal-path consistency.</b> Median branch-wise position RMSE is 1.15 mm. Error increases with root-to-terminal path length while remaining spatially structured across the airway tree.</figcaption>
       </figure>
+    </section>
+
+    <section id="videos" class="section video-section" aria-labelledby="videos-heading">
+      <div class="section-title">
+        <p class="kicker">RESEARCH VIDEOS</p>
+        <h2 id="videos-heading">From physical motion to the grounded twin</h2>
+        <p>Watch synchronized physical and simulated experiments, segment-level bending, and navigation through a transparent airway phantom. Videos play on demand.</p>
+      </div>
+
+      <div class="video-feature">
+        <div class="video-frame video-frame-feature">
+          <video controls preload="none" playsinline poster="assets/videos/overview.jpg" aria-label="Full research video with robot modeling, dynamics grounding, comparison, and navigation">
+            <source src="assets/videos/overview.mp4" type="video/mp4">
+            Your browser does not support embedded video.
+          </video>
+        </div>
+        <div class="video-feature-copy">
+          <span class="video-index">FEATURE FILM / 01:27</span>
+          <h3>The complete research story</h3>
+          <p>A guided sequence through tendon-driven modeling, online Real-to-Sim grounding, before-and-after comparison, and Sim-to-Real airway navigation.</p>
+          <span class="video-format">PHYSICAL ROBOT + MUJOCO TWIN</span>
+        </div>
+      </div>
+
+      <div class="video-group-heading">
+        <span>01 / ACTUATION</span>
+        <h3>How the two continuum segments bend</h3>
+      </div>
+      <div class="video-grid">
+        <article class="video-card">
+          <div class="video-frame"><video controls preload="none" playsinline poster="assets/videos/proximal.jpg" aria-label="Proximal segment bending, physical robot and MuJoCo twin"><source src="assets/videos/proximal.mp4" type="video/mp4">Your browser does not support embedded video.</video></div>
+          <div class="video-card-copy"><span>PROXIMAL / 00:07</span><h4>Proximal bending</h4><p>Physical motion and the grounded twin shown alongside compass and motor signals.</p></div>
+        </article>
+        <article class="video-card">
+          <div class="video-frame"><video controls preload="none" playsinline poster="assets/videos/distal.jpg" aria-label="Distal segment bending, physical robot and MuJoCo twin"><source src="assets/videos/distal.mp4" type="video/mp4">Your browser does not support embedded video.</video></div>
+          <div class="video-card-copy"><span>DISTAL / 00:07</span><h4>Distal bending</h4><p>The far segment bends while the synchronized actuation and twin state remain visible.</p></div>
+        </article>
+        <article class="video-card">
+          <div class="video-frame"><video controls preload="none" playsinline poster="assets/videos/full-bend.jpg" aria-label="Coordinated dual-segment 180-degree bend"><source src="assets/videos/full-bend.mp4" type="video/mp4">Your browser does not support embedded video.</video></div>
+          <div class="video-card-copy"><span>COORDINATED / 00:11</span><h4>180-degree bend</h4><p>A large coordinated bend demonstrates the combined range of the two active segments.</p></div>
+        </article>
+      </div>
+
+      <div class="video-group-heading">
+        <span>02 / AIRWAY TRIALS</span>
+        <h3>Motion inside the branching anatomy</h3>
+      </div>
+      <div class="video-grid">
+        <article class="video-card">
+          <div class="video-frame"><video controls preload="none" playsinline poster="assets/videos/left-upper.jpg" aria-label="Left upper airway navigation with simulated and physical views"><source src="assets/videos/left-upper.mp4" type="video/mp4">Your browser does not support embedded video.</video></div>
+          <div class="video-card-copy"><span>LEFT UPPER / 00:10</span><h4>Upper-lobe navigation</h4><p>Side-by-side digital-twin and phantom views with endoscopy, steering, and trajectory telemetry.</p></div>
+        </article>
+        <article class="video-card">
+          <div class="video-frame"><video controls preload="none" playsinline poster="assets/videos/right-middle.jpg" aria-label="Right middle airway navigation with simulated and physical views"><source src="assets/videos/right-middle.mp4" type="video/mp4">Your browser does not support embedded video.</video></div>
+          <div class="video-card-copy"><span>RIGHT MIDDLE / 00:09</span><h4>Middle-lobe navigation</h4><p>A separate airway route pairs the simulated twin with the physical phantom experiment.</p></div>
+        </article>
+        <article class="video-card">
+          <div class="video-frame"><video controls preload="none" playsinline poster="assets/videos/airway-bend.jpg" aria-label="Bronchoscope bending inside a transparent airway phantom"><source src="assets/videos/airway-bend.mp4" type="video/mp4">Your browser does not support embedded video.</video></div>
+          <div class="video-card-copy"><span>PHYSICAL PHANTOM / 00:19</span><h4>Bending in the airway</h4><p>A direct view of the continuum robot moving within the transparent lung phantom.</p></div>
+        </article>
+      </div>
+
+      <div class="video-comparison">
+        <div class="video-frame"><video controls preload="none" playsinline poster="assets/videos/comparison.jpg" aria-label="Nominal simulation compared with the online grounded twin"><source src="assets/videos/comparison.mp4" type="video/mp4">Your browser does not support embedded video.</video></div>
+        <div class="video-comparison-copy"><span class="video-index">03 / BEFORE &amp; AFTER / 00:11</span><h3>What grounding changes</h3><p>Nominal and online-grounded simulation are shown side by side with position, shape, and curvature error plots.</p></div>
+      </div>
     </section>
 
     <section class="section citation-section">
