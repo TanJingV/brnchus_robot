@@ -167,7 +167,7 @@ h1 { max-width: 1080px; margin: 24px auto 20px; font: 600 clamp(36px, 5.1vw, 61p
 .research-overview { width: min(1240px, calc(100% - 56px)); padding: 72px 0 58px; }
 .overview-grid { display: grid; grid-template-columns: minmax(0, .82fr) minmax(480px, 1.18fr); align-items: center; gap: clamp(42px, 6vw, 82px); }
 .overview-copy h2 { max-width: 560px; margin: 10px 0 21px; font: 600 clamp(31px, 3.7vw, 48px)/1.12 "Iowan Old Style", "Palatino Linotype", Georgia, serif; letter-spacing: -.03em; text-wrap: balance; }
-.abstract-copy { margin: 0; color: #46566f; font-family: "Iowan Old Style", "Songti SC", serif; font-size: 16px; line-height: 1.82; text-align: left; }
+.abstract-copy { margin: 0; color: #46566f; font-family: "Iowan Old Style", "Songti SC", serif; font-size: 16px; line-height: 1.82; text-align: justify; text-justify: inter-word; }
 .framework-figure { padding: 18px; border: 1px solid #dfe6f0; border-radius: 18px; background: linear-gradient(145deg, #f8fafd, #fff); box-shadow: 0 22px 55px rgba(31, 50, 82, .08); }
 .framework-figure img { border: 0; border-radius: 9px; }
 .contribution-band { display: grid; grid-template-columns: 245px 1fr; gap: 35px; margin-top: 48px; padding: 30px; border: 1px solid #dce4ef; border-radius: 18px; background: linear-gradient(120deg, #f4f7fc, #fff 54%); }
@@ -176,7 +176,7 @@ h1 { max-width: 1080px; margin: 24px auto 20px; font: 600 clamp(36px, 5.1vw, 61p
 .contribution-grid article { display: grid; grid-template-columns: 29px 1fr; gap: 11px; padding: 2px 20px; border-left: 1px solid #dce4ef; }
 .contribution-grid article > b { color: var(--blue); font: 700 10px "SFMono-Regular", Consolas, monospace; }
 .contribution-grid h3 { margin: 0 0 7px; font-size: 14px; line-height: 1.35; }
-.contribution-grid p { margin: 0; color: #647188; font-size: 11px; line-height: 1.65; }
+.contribution-grid p { margin: 0; color: #647188; font-size: 11px; line-height: 1.65; text-align: justify; text-justify: inter-word; }
 .paper-figure { margin: 0; }
 .paper-figure img { display: block; width: 100%; border: 1px solid var(--line); border-radius: 12px; background: #fff; }
 .paper-figure figcaption { margin: 11px 8px 0; color: #6d788b; font-size: 11px; line-height: 1.6; text-align: left; }
@@ -189,7 +189,7 @@ h1 { max-width: 1080px; margin: 24px auto 20px; font: 600 clamp(36px, 5.1vw, 61p
 .evidence-card-copy { min-height: 190px; }
 .chapter-index { color: var(--blue); font: 700 9px "SFMono-Regular", Consolas, monospace; letter-spacing: .11em; }
 .evidence-card h3 { max-width: 480px; margin: 9px 0 12px; font: 600 27px/1.18 "Iowan Old Style", Georgia, serif; letter-spacing: -.02em; }
-.evidence-card-copy p { margin: 0; color: #59677d; font-size: 13px; line-height: 1.72; }
+.evidence-card-copy p { margin: 0; color: #59677d; font-size: 13px; line-height: 1.72; text-align: justify; text-justify: inter-word; }
 .evidence-card > .paper-figure img { height: 245px; object-fit: contain; }
 .validation-figures { display: grid; grid-template-columns: 1fr 1fr; gap: 13px; }
 .validation-figures .paper-figure img { height: 245px; object-fit: contain; }
