@@ -9,7 +9,7 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <title>BronchoTwin - Multimodal Dynamics Grounding</title>
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=21">
+  <link rel="stylesheet" href="styles.css?v=22">
   <script type="importmap">
     {
       "imports": {
@@ -33,6 +33,64 @@
   </header>
 
   <main id="top">
+    <section id="videos" class="showcase-hero" aria-labelledby="showcase-title">
+      <div class="showcase-intro">
+        <p class="kicker">BRONCHOTWIN IN MOTION</p>
+        <h2 id="showcase-title">Physical robot. Grounded twin. One continuous story.</h2>
+      </div>
+      <div class="showcase-stage" aria-roledescription="carousel" aria-label="Research video highlights">
+        <div class="showcase-slides">
+          <article class="showcase-slide is-active" data-title="The complete research story" data-label="OVERVIEW / 01:27" data-src="assets/videos/overview.mp4" style="--slot: 0">
+            <video muted loop playsinline preload="none" poster="assets/videos/overview.jpg" data-src="assets/videos/overview.mp4" data-start="75"></video>
+            <button class="showcase-select" type="button" aria-label="Show the complete research story"></button>
+            <div class="showcase-shade"></div>
+            <div class="showcase-copy"><span>OVERVIEW / 01:27</span><h3>The complete research story</h3><p>Modeling, online grounding, comparison, and airway navigation.</p><button class="showcase-watch" type="button">Watch with sound <i aria-hidden="true">&#8599;</i></button></div>
+          </article>
+          <article class="showcase-slide" data-title="Proximal bending" data-label="ACTUATION / 00:07" data-src="assets/videos/proximal.mp4" style="--slot: 1">
+            <video muted loop playsinline preload="none" poster="assets/videos/proximal.jpg" data-src="assets/videos/proximal.mp4"></video>
+            <button class="showcase-select" type="button" aria-label="Show proximal bending"></button><div class="showcase-shade"></div>
+            <div class="showcase-copy"><span>ACTUATION / 00:07</span><h3>Proximal bending</h3><p>Physical response and grounded MuJoCo state in one synchronized view.</p><button class="showcase-watch" type="button">Watch with sound <i aria-hidden="true">&#8599;</i></button></div>
+          </article>
+          <article class="showcase-slide" data-title="Distal bending" data-label="ACTUATION / 00:07" data-src="assets/videos/distal.mp4" style="--slot: 2">
+            <video muted loop playsinline preload="none" poster="assets/videos/distal.jpg" data-src="assets/videos/distal.mp4"></video>
+            <button class="showcase-select" type="button" aria-label="Show distal bending"></button><div class="showcase-shade"></div>
+            <div class="showcase-copy"><span>ACTUATION / 00:07</span><h3>Distal bending</h3><p>Independent far-segment motion with live tendon and motor telemetry.</p><button class="showcase-watch" type="button">Watch with sound <i aria-hidden="true">&#8599;</i></button></div>
+          </article>
+          <article class="showcase-slide" data-title="180-degree coordinated bend" data-label="FULL RANGE / 00:11" data-src="assets/videos/full-bend.mp4" style="--slot: 3">
+            <video muted loop playsinline preload="none" poster="assets/videos/full-bend.jpg" data-src="assets/videos/full-bend.mp4"></video>
+            <button class="showcase-select" type="button" aria-label="Show 180-degree coordinated bend"></button><div class="showcase-shade"></div>
+            <div class="showcase-copy"><span>FULL RANGE / 00:11</span><h3>180-degree coordinated bend</h3><p>The two continuum segments combine to reach a large-curvature configuration.</p><button class="showcase-watch" type="button">Watch with sound <i aria-hidden="true">&#8599;</i></button></div>
+          </article>
+          <article class="showcase-slide" data-title="Upper-lobe navigation" data-label="AIRWAY TRIAL / 00:10" data-src="assets/videos/left-upper.mp4" style="--slot: 4">
+            <video muted loop playsinline preload="none" poster="assets/videos/left-upper.jpg" data-src="assets/videos/left-upper.mp4"></video>
+            <button class="showcase-select" type="button" aria-label="Show upper-lobe navigation"></button><div class="showcase-shade"></div>
+            <div class="showcase-copy"><span>AIRWAY TRIAL / 00:10</span><h3>Upper-lobe navigation</h3><p>Digital-twin and phantom views stay aligned through a branching path.</p><button class="showcase-watch" type="button">Watch with sound <i aria-hidden="true">&#8599;</i></button></div>
+          </article>
+          <article class="showcase-slide" data-title="Middle-lobe navigation" data-label="AIRWAY TRIAL / 00:09" data-src="assets/videos/right-middle.mp4" style="--slot: 5">
+            <video muted loop playsinline preload="none" poster="assets/videos/right-middle.jpg" data-src="assets/videos/right-middle.mp4"></video>
+            <button class="showcase-select" type="button" aria-label="Show middle-lobe navigation"></button><div class="showcase-shade"></div>
+            <div class="showcase-copy"><span>AIRWAY TRIAL / 00:09</span><h3>Middle-lobe navigation</h3><p>Simulation, physical motion, endoscopy, and steering telemetry together.</p><button class="showcase-watch" type="button">Watch with sound <i aria-hidden="true">&#8599;</i></button></div>
+          </article>
+          <article class="showcase-slide" data-title="Bending inside the airway" data-label="PHYSICAL PHANTOM / 00:19" data-src="assets/videos/airway-bend.mp4" style="--slot: 6">
+            <video muted loop playsinline preload="none" poster="assets/videos/airway-bend.jpg" data-src="assets/videos/airway-bend.mp4"></video>
+            <button class="showcase-select" type="button" aria-label="Show bending inside the airway"></button><div class="showcase-shade"></div>
+            <div class="showcase-copy"><span>PHYSICAL PHANTOM / 00:19</span><h3>Bending inside the airway</h3><p>A direct overhead view of continuum motion within the transparent phantom.</p><button class="showcase-watch" type="button">Watch with sound <i aria-hidden="true">&#8599;</i></button></div>
+          </article>
+          <article class="showcase-slide" data-title="What grounding changes" data-label="BEFORE &amp; AFTER / 00:11" data-src="assets/videos/comparison.mp4" style="--slot: -1">
+            <video muted loop playsinline preload="none" poster="assets/videos/comparison.jpg" data-src="assets/videos/comparison.mp4"></video>
+            <button class="showcase-select" type="button" aria-label="Show before-and-after grounding comparison"></button><div class="showcase-shade"></div>
+            <div class="showcase-copy"><span>BEFORE &amp; AFTER / 00:11</span><h3>What grounding changes</h3><p>Nominal and grounded simulations compared through three error measures.</p><button class="showcase-watch" type="button">Watch with sound <i aria-hidden="true">&#8599;</i></button></div>
+          </article>
+        </div>
+      </div>
+      <div class="showcase-controls">
+        <button class="showcase-arrow" id="showcase-prev" type="button" aria-label="Previous video">&#8592;</button>
+        <div class="showcase-dots" role="tablist" aria-label="Choose a research video"></div>
+        <button class="showcase-arrow" id="showcase-next" type="button" aria-label="Next video">&#8594;</button>
+      </div>
+      <p class="showcase-status" aria-live="polite"><span id="showcase-current">01</span> / 08 &nbsp; <b id="showcase-name">The complete research story</b></p>
+    </section>
+
     <section class="paper-hero">
       <p class="venue">ICRA MANUSCRIPT IN PREPARATION / INTERACTIVE PROJECT PAGE</p>
       <h1>Multimodal Dynamics Grounding for an Actionable World Model of a Dual-Segment Tendon-Driven Continuum Robot</h1>
@@ -263,72 +321,6 @@
       </figure>
     </section>
 
-    <section id="videos" class="section video-section" aria-labelledby="videos-heading">
-      <div class="section-title">
-        <p class="kicker">RESEARCH VIDEOS</p>
-        <h2 id="videos-heading">From physical motion to the grounded twin</h2>
-        <p>Watch synchronized physical and simulated experiments, segment-level bending, and navigation through a transparent airway phantom. Videos play on demand.</p>
-      </div>
-
-      <div class="video-feature">
-        <div class="video-frame video-frame-feature">
-          <video controls preload="none" playsinline poster="assets/videos/overview.jpg" aria-label="Full research video with robot modeling, dynamics grounding, comparison, and navigation">
-            <source src="assets/videos/overview.mp4" type="video/mp4">
-            Your browser does not support embedded video.
-          </video>
-        </div>
-        <div class="video-feature-copy">
-          <span class="video-index">FEATURE FILM / 01:27</span>
-          <h3>The complete research story</h3>
-          <p>A guided sequence through tendon-driven modeling, online Real-to-Sim grounding, before-and-after comparison, and Sim-to-Real airway navigation.</p>
-          <span class="video-format">PHYSICAL ROBOT + MUJOCO TWIN</span>
-        </div>
-      </div>
-
-      <div class="video-group-heading">
-        <span>01 / ACTUATION</span>
-        <h3>How the two continuum segments bend</h3>
-      </div>
-      <div class="video-grid">
-        <article class="video-card">
-          <div class="video-frame"><video controls preload="none" playsinline poster="assets/videos/proximal.jpg" aria-label="Proximal segment bending, physical robot and MuJoCo twin"><source src="assets/videos/proximal.mp4" type="video/mp4">Your browser does not support embedded video.</video></div>
-          <div class="video-card-copy"><span>PROXIMAL / 00:07</span><h4>Proximal bending</h4><p>Physical motion and the grounded twin shown alongside compass and motor signals.</p></div>
-        </article>
-        <article class="video-card">
-          <div class="video-frame"><video controls preload="none" playsinline poster="assets/videos/distal.jpg" aria-label="Distal segment bending, physical robot and MuJoCo twin"><source src="assets/videos/distal.mp4" type="video/mp4">Your browser does not support embedded video.</video></div>
-          <div class="video-card-copy"><span>DISTAL / 00:07</span><h4>Distal bending</h4><p>The far segment bends while the synchronized actuation and twin state remain visible.</p></div>
-        </article>
-        <article class="video-card">
-          <div class="video-frame"><video controls preload="none" playsinline poster="assets/videos/full-bend.jpg" aria-label="Coordinated dual-segment 180-degree bend"><source src="assets/videos/full-bend.mp4" type="video/mp4">Your browser does not support embedded video.</video></div>
-          <div class="video-card-copy"><span>COORDINATED / 00:11</span><h4>180-degree bend</h4><p>A large coordinated bend demonstrates the combined range of the two active segments.</p></div>
-        </article>
-      </div>
-
-      <div class="video-group-heading">
-        <span>02 / AIRWAY TRIALS</span>
-        <h3>Motion inside the branching anatomy</h3>
-      </div>
-      <div class="video-grid">
-        <article class="video-card">
-          <div class="video-frame"><video controls preload="none" playsinline poster="assets/videos/left-upper.jpg" aria-label="Left upper airway navigation with simulated and physical views"><source src="assets/videos/left-upper.mp4" type="video/mp4">Your browser does not support embedded video.</video></div>
-          <div class="video-card-copy"><span>LEFT UPPER / 00:10</span><h4>Upper-lobe navigation</h4><p>Side-by-side digital-twin and phantom views with endoscopy, steering, and trajectory telemetry.</p></div>
-        </article>
-        <article class="video-card">
-          <div class="video-frame"><video controls preload="none" playsinline poster="assets/videos/right-middle.jpg" aria-label="Right middle airway navigation with simulated and physical views"><source src="assets/videos/right-middle.mp4" type="video/mp4">Your browser does not support embedded video.</video></div>
-          <div class="video-card-copy"><span>RIGHT MIDDLE / 00:09</span><h4>Middle-lobe navigation</h4><p>A separate airway route pairs the simulated twin with the physical phantom experiment.</p></div>
-        </article>
-        <article class="video-card">
-          <div class="video-frame"><video controls preload="none" playsinline poster="assets/videos/airway-bend.jpg" aria-label="Bronchoscope bending inside a transparent airway phantom"><source src="assets/videos/airway-bend.mp4" type="video/mp4">Your browser does not support embedded video.</video></div>
-          <div class="video-card-copy"><span>PHYSICAL PHANTOM / 00:19</span><h4>Bending in the airway</h4><p>A direct view of the continuum robot moving within the transparent lung phantom.</p></div>
-        </article>
-      </div>
-
-      <div class="video-comparison">
-        <div class="video-frame"><video controls preload="none" playsinline poster="assets/videos/comparison.jpg" aria-label="Nominal simulation compared with the online grounded twin"><source src="assets/videos/comparison.mp4" type="video/mp4">Your browser does not support embedded video.</video></div>
-        <div class="video-comparison-copy"><span class="video-index">03 / BEFORE &amp; AFTER / 00:11</span><h3>What grounding changes</h3><p>Nominal and online-grounded simulation are shown side by side with position, shape, and curvature error plots.</p></div>
-      </div>
-    </section>
-
     <section class="section citation-section">
       <p class="kicker">PAPER AND CODE</p>
       <h2>Research in progress</h2>
@@ -341,11 +333,20 @@
     </section>
   </main>
 
+  <dialog class="video-dialog" id="video-dialog" aria-labelledby="dialog-video-title">
+    <div class="video-dialog-shell">
+      <button class="video-dialog-close" id="video-dialog-close" type="button" aria-label="Close video">&#10005;</button>
+      <video id="dialog-video" controls playsinline preload="metadata"></video>
+      <div class="video-dialog-caption"><span id="dialog-video-label"></span><h2 id="dialog-video-title"></h2></div>
+    </div>
+  </dialog>
+
   <footer>
     <a class="wordmark" href="#top">BRONCHOTWIN / MUJOCO</a>
     <p>Interactive physics-grounded simulation for a dual-segment robotic bronchoscope.</p>
     <a href="https://continuumroboticslab.github.io/opencr-mujoco/">Design reference</a>
   </footer>
+  <script src="video-showcase.js?v=1" defer></script>
   <script type="module" src="simulator.js?v=24"></script>
 </body>
 </html>
