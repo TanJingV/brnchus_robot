@@ -213,87 +213,78 @@
       <p class="figure-caption"><b>Interactive MuJoCo twin.</b> The browser scene is generated from the complete desktop MJCF: base mechanism, 577 mm insertion stage, passive conduit, two active segments, six routed tendons, tip camera, and rigid non-convex airway collision geometry. The airway mesh bounds the lumen and prevents the continuum robot from crossing the inner wall.</p>
     </section>
 
-    <section id="overview" class="section research-overview">
-      <div class="overview-grid">
-        <div class="overview-copy">
-          <p class="kicker">ABSTRACT</p>
-          <h2>An actionable dynamics world model for pulmonary intervention</h2>
-          <p class="abstract-copy">Autonomous pulmonary intervention with continuum robots remains constrained by the absence of an online dynamics representation that preserves mechanical structure while adapting simulated responses to changes in physical tendon transmission. We develop an actionable dynamics world model for a dual-segment tendon-driven continuum robot. Its MuJoCo representation captures measured geometry, compliant mechanics, tendon routing, actuator transmission, and airway contact. Multimodal grounding integrates distributed shape observations, two electromagnetic sensor poses, motor feedback, and command history. MDS-Net combines structural encoding, an actuation delay mask, and causal temporal inference to estimate curvature, effective parameters, residuals, and model confidence. Confidence and observability regulate gradual parameter adaptation, while grounded response maps support command transfer and state-dependent decoupling.</p>
-        </div>
+    <section id="overview" class="section paper-chapter research-overview">
+      <header class="chapter-header">
+        <span class="chapter-number" aria-hidden="true">01</span>
+        <div><p class="kicker">OVERVIEW</p><h2>Closing the loop between physical dynamics and predictive simulation</h2><p class="chapter-dek">A mechanically explicit twin is continuously grounded by multimodal observations, then used to evaluate actions before physical execution.</p></div>
+      </header>
+
+      <div class="overview-story">
+        <article class="abstract-panel">
+          <span class="eyebrow">RESEARCH PREMISE</span>
+          <p class="abstract-copy">Safe autonomous pulmonary intervention requires a world model that remains mechanically interpretable while tracking changes in tendon transmission. BronchoTwin combines a measured dual-segment MuJoCo model with distributed shape observations, two EM poses, motor feedback, and command history. MDS-Net estimates curvature, bounded effective parameters, residuals, and confidence; accepted updates progressively align the twin for short-horizon prediction, state-dependent decoupling, and command transfer.</p>
+          <div class="topic-tags" aria-label="Core research themes"><span>REAL-TO-SIM</span><span>ONLINE GROUNDING</span><span>SIM-TO-REAL</span></div>
+        </article>
         <figure class="paper-figure framework-figure">
-          <img src="assets/paper-framework.png" alt="Closed-loop multimodal dynamics grounding and model-mediated execution framework" loading="lazy">
-          <figcaption><b>Framework overview.</b> Multimodal observations ground the MuJoCo dynamics state and bounded parameters. Counterfactual rollouts guide predictive control, and physical feedback closes the Real-to-Sim-to-Real loop.</figcaption>
+          <img src="assets/paper-framework.png" width="1638" height="836" alt="Closed-loop multimodal dynamics grounding and model-mediated execution framework" loading="lazy">
+          <figcaption><b>Closed-loop framework.</b> Multimodal observations ground the dynamics state and bounded parameters; counterfactual rollouts guide execution.</figcaption>
         </figure>
       </div>
 
-      <div class="contribution-band" aria-labelledby="contribution-title">
-        <div class="contribution-heading">
-          <p class="kicker">CONTRIBUTIONS</p>
-          <h2 id="contribution-title">One model, three connected advances</h2>
-        </div>
-        <div class="contribution-grid">
-          <article><b>01</b><div><h3>Physics-grounded world model</h3><p>A dual-segment MuJoCo representation preserves measured geometry and tendon topology while exposing bounded transmission and coupling dynamics for rapid rollouts.</p></div></article>
-          <article><b>02</b><div><h3>Multimodal dynamics synchronization</h3><p>MDS-Net aligns distributed shape, dual EM poses, motor feedback, and delayed command history. Confidence and observability gate accepted state and parameter updates.</p></div></article>
-          <article><b>03</b><div><h3>Model-mediated execution</h3><p>Grounded response maps support state-dependent decoupling, short-horizon prediction, command transfer, and closed-loop physical operation.</p></div></article>
-        </div>
+      <div class="contribution-rail" aria-label="Research contributions">
+        <article><b>01</b><div><h3>Mechanics first</h3><p>Measured geometry and tendon topology remain explicit in MuJoCo.</p></div></article>
+        <article><b>02</b><div><h3>Dynamics synchronized</h3><p>MDS-Net aligns shape, EM poses, motors, and delayed commands.</p></div></article>
+        <article><b>03</b><div><h3>Prediction made actionable</h3><p>Grounded response maps support rollout, transfer, and physical control.</p></div></article>
       </div>
     </section>
 
-    <section id="method" class="section evidence-section">
-      <div class="section-title compact-title">
-        <p class="kicker">MODEL AND VALIDATION</p>
-        <h2>Measured mechanics, synchronized evidence</h2>
-        <p>The twin retains the robot's physical topology, while a shared experimental clock connects sensing, simulation, and execution.</p>
-      </div>
+    <section id="method" class="section paper-chapter evidence-section">
+      <header class="chapter-header">
+        <span class="chapter-number" aria-hidden="true">02</span>
+        <div><p class="kicker">METHOD</p><h2>Measured mechanics. Bounded adaptation. Shared evidence.</h2><p class="chapter-dek">The model preserves the physical transmission architecture while updating only a compact, interpretable dynamics state.</p></div>
+      </header>
 
-      <div class="evidence-grid">
-        <article class="evidence-card">
-          <div class="evidence-card-copy">
-            <span class="chapter-index">01 / PHYSICS-GROUNDED MODEL</span>
-            <h3>Mechanics remain explicit inside the twin</h3>
-            <p>The 3.5 mm robot combines two 21 mm compliant segments, six independently routed tendons, rigid transition sections, a passive conduit, and a seventh motor for linear insertion. Distal tendons traverse and load the proximal segment, so coupling remains part of the simulation rather than a geometric correction.</p>
+      <div class="method-board">
+        <article class="method-card model-card">
+          <div class="method-card-copy">
+            <span class="eyebrow">PHYSICS-GROUNDED MODEL</span>
+            <h3>The transmission topology stays visible</h3>
+            <p>Two compliant 21 mm segments, six routed tendons, rigid transitions, airway contact, and linear insertion are represented directly. Distal tendons traverse the proximal segment, preserving configuration-dependent coupling.</p>
           </div>
           <figure class="paper-figure">
-            <img src="assets/paper-model.png" alt="Dual-segment continuum robot model, cross-section, tendon layout, and discretization" loading="lazy">
-            <figcaption><b>Robot model.</b> Measured geometry, tendon centerlines, compliant joints, and collision capsules reproduce the transmission topology.</figcaption>
+            <img src="assets/paper-structure.png" width="1602" height="1135" alt="Physics-grounded MuJoCo structure, tendon layout, and discretized continuum model" loading="lazy">
+            <figcaption><b>Model structure.</b> Routed tendons, compliant joints, and collision geometry reproduce the physical transmission architecture.</figcaption>
           </figure>
-          <div class="parameter-card compact-parameters">
-            <span>12 BOUNDED DYNAMICS PARAMETERS</span>
-            <code>K1, K2</code><small>stiffness</small>
-            <code>D1, D2</code><small>damping</small>
-            <code>mu1, mu2</code><small>transmission</small>
-            <code>T0,1, T0,2</code><small>pretension</small>
-            <code>b1, b2</code><small>directional response</small>
-            <code>C12, C21</code><small>coupling</small>
-          </div>
+          <figure class="paper-figure dimension-figure">
+            <img src="assets/paper-dimensions.png" width="1455" height="264" alt="Measured segment dimensions of the dual-segment continuum robot" loading="lazy">
+            <figcaption><b>Measured geometry.</b> The 54 mm distal assembly fixes segment spans, rigid transforms, contact surfaces, and virtual sensor sites.</figcaption>
+          </figure>
+          <div class="parameter-pills" aria-label="Bounded dynamics parameters"><span>K / stiffness</span><span>D / damping</span><span>mu / transmission</span><span>T0 / pretension</span><span>b / hysteresis</span><span>C / coupling</span></div>
         </article>
 
-        <article class="evidence-card">
-          <div class="evidence-card-copy">
-            <span class="chapter-index">02 / EXPERIMENTAL VALIDATION</span>
-            <h3>A shared clock from sensing to execution</h3>
-            <p>Seven motor drives, tendon displacement sensing, two EM probes, an RGB-D camera, distributed shape markers, and a transparent lung phantom are synchronized for an 80 s grounding sequence and model-mediated visual servoing.</p>
+        <article class="method-card validation-card">
+          <div class="method-card-copy">
+            <span class="eyebrow">EXPERIMENTAL VALIDATION</span>
+            <h3>One clock connects sensing to execution</h3>
+            <p>Seven motor drives, tendon sensing, two EM probes, RGB-D vision, distributed shape markers, and the transparent airway phantom are synchronized for grounding and model-mediated visual servoing.</p>
           </div>
-          <div class="validation-figures">
-            <figure class="paper-figure">
-              <img src="assets/paper-platform.png" alt="Experimental robotic bronchoscope platform and synchronized sensing hardware" loading="lazy">
-              <figcaption><b>Experimental platform.</b> The physical robot and sensing stack share one acquisition clock.</figcaption>
-            </figure>
-            <figure class="paper-figure">
-              <img src="assets/paper-grounding.png" alt="Physical and simulated configurations during shared-command Real-to-Sim grounding" loading="lazy">
-              <figcaption><b>Shared-command grounding.</b> Identical Motor1-Motor7 commands drive physical and simulated systems.</figcaption>
-            </figure>
-          </div>
+          <figure class="paper-figure">
+            <img src="assets/paper-platform.jpg" width="2204" height="1428" alt="Experimental robotic bronchoscope platform and synchronized sensing hardware" loading="lazy">
+            <figcaption><b>Experimental platform.</b> Sensing and actuation share a hardware clock across the 692 mm transmission span.</figcaption>
+          </figure>
+          <figure class="paper-figure grounding-figure">
+            <img src="assets/paper-grounding.png" width="1650" height="713" alt="Physical and simulated configurations during shared-command Real-to-Sim grounding" loading="lazy">
+            <figcaption><b>Shared-command grounding.</b> Identical Motor1-Motor7 commands excite insertion and single- or dual-segment bending.</figcaption>
+          </figure>
         </article>
       </div>
     </section>
 
-    <section id="results" class="section results-section">
-      <div class="section-title">
-        <p class="kicker">RESULTS</p>
-        <h2>The twin converges while preserving control relevance</h2>
-        <p>Online grounding reduces model discrepancy and maintains an actionable simulation across increasingly deep airway navigation.</p>
-      </div>
+    <section id="results" class="section paper-chapter results-section">
+      <header class="chapter-header results-header">
+        <span class="chapter-number" aria-hidden="true">03</span>
+        <div><p class="kicker">RESULTS</p><h2>Convergent grounding that remains useful for control</h2><p class="chapter-dek">Error falls as synchronization confidence rises, while branch-wise consistency is retained across 65 terminal airway paths.</p></div>
+      </header>
       <div class="result-cards">
         <article><b>50%</b><span>lower final-window mean position error</span><small>3.0 to 1.44 mm over the 80 s sequence</small></article>
         <article><b>0.91</b><span>final synchronization confidence</span><small>with accepted update activity reduced to 0.05</small></article>
@@ -301,22 +292,21 @@
         <article><b>r = 0.83</b><span>error correlation with path length</span><small>capturing increased difficulty in deeper navigation</small></article>
       </div>
 
-      <p class="result-statement">Across 65 terminal paths, the grounded model remains accurate enough for action-conditioned prediction and command transfer.</p>
-
       <div class="result-figure-grid">
         <figure class="paper-figure">
-          <img src="assets/paper-adaptation.png" alt="Accepted dynamics parameters, model error, confidence, and update activity during online synchronization" loading="lazy">
+          <img src="assets/paper-adaptation.png" width="1568" height="971" alt="Accepted dynamics parameters, model error, confidence, and update activity during online synchronization" loading="lazy">
           <figcaption><b>Online adaptation.</b> Error falls, confidence rises, and updates diminish as synchronization stabilizes.</figcaption>
         </figure>
         <figure class="paper-figure">
-          <img src="assets/paper-navigation.png" alt="Chronological physical and simulated states during a complete B12 airway navigation trial" loading="lazy">
-          <figcaption><b>Complete B12 trial.</b> Paired physical and simulated states span insertion, navigation, and retraction.</figcaption>
+          <img src="assets/paper-branches.png" width="1569" height="646" alt="Real-to-Sim position consistency across 65 terminal airway paths" loading="lazy">
+          <figcaption><b>Terminal-path consistency.</b> Median branch-wise RMSE is 1.15 mm and correlates with root-to-terminal path length.</figcaption>
         </figure>
-        <figure class="paper-figure">
-          <img src="assets/paper-branches.png" alt="Real-to-Sim position consistency across 65 terminal airway paths" loading="lazy">
-          <figcaption><b>Terminal-path consistency.</b> Branch-wise RMSE remains spatially structured across the airway tree.</figcaption>
+        <figure class="paper-figure navigation-figure">
+          <img src="assets/paper-navigation.png" width="1650" height="368" alt="Chronological physical and simulated states during a complete B12 airway navigation trial" loading="lazy">
+          <figcaption><b>Complete B12 trial.</b> Paired physical and simulated states span entrance, branch insertion, deep navigation, and retraction.</figcaption>
         </figure>
       </div>
+      <p class="result-statement">The grounded twin stays close enough to the physical robot to support action-conditioned prediction and command transfer.</p>
     </section>
 
     <section class="section citation-section">
@@ -331,6 +321,14 @@
     </section>
   </main>
 
+  <dialog class="figure-dialog" id="figure-dialog" aria-labelledby="figure-dialog-caption">
+    <div class="figure-dialog-shell">
+      <button class="figure-dialog-close" id="figure-dialog-close" type="button" aria-label="Close enlarged figure">&#10005;</button>
+      <img id="figure-dialog-image" alt="">
+      <p id="figure-dialog-caption"></p>
+    </div>
+  </dialog>
+
   <dialog class="video-dialog" id="video-dialog" aria-labelledby="dialog-video-title">
     <div class="video-dialog-shell">
       <button class="video-dialog-close" id="video-dialog-close" type="button" aria-label="Close video">&#10005;</button>
@@ -344,6 +342,7 @@
     <p>Interactive physics-grounded simulation for a dual-segment robotic bronchoscope.</p>
     <a href="https://continuumroboticslab.github.io/opencr-mujoco/">Design reference</a>
   </footer>
+  <script src="figure-lightbox.js?v=1" defer></script>
   <script src="video-showcase.js?v=1" defer></script>
   <script type="module" src="simulator.js?v=24"></script>
 </body>
